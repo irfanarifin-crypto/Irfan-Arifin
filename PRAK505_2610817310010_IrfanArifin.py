@@ -1,13 +1,13 @@
-def Biodata(tahun, nama, asal):
-    tahun_sekarang = 2020
-    umur = tahun_sekarang - tahun
+def Biodata(year, name, place):
+    current_year = 2020
+    age = current_year - year
 
-    print("Perkenalkan Nama Saya :", nama)
-    print("Umur Saya :", umur)
-    print("Saya Adalah Angkatan :", tahun_sekarang)
-    print("Asal Saya dari :", asal)
+    print("Perkenalkan Nama Saya :", name)
+    print("Umur Saya :", age)
+    print("Saya Adalah Angkatan :", current_year)
+    print("Asal Saya dari :", place)
 
-tahunLahir = int(input())
+yearBirth = int(input())
 A = input()
 B = input()
-Biodata(tahunLahir, A, B)
+Biodata(yearBirth, A, B)

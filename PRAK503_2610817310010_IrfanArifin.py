@@ -1,23 +1,23 @@
-def maksimal(a, b):
+def maximum(a, b):
     if a > b:
         return a
     return b
 
-def minimal(a, b):
+def minimum(a, b):
     if a < b:
         return a
     return b
 
-batas = 0
-maks = -100000
+limit = 0
+max = -100000
 minim = 100000
-bilangan = int(input())
+number = int(input())
 data = list(map(int, input().split()))
 
-while batas < bilangan:
-    nilai = data[batas]
-    maks = maksimal(maks, nilai)
-    minim = minimal(minim, nilai)
-    batas += 1
+while limit < number:
+    value = data[limit]
+    max = maximum(max, value)
+    minim = minimum(minim, value)
+    limit += 1
 
-print(maks, minim)
+print(max, minim)

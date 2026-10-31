@@ -1,29 +1,29 @@
 #include <stdio.h>
 #include <math.h>
 
-int mutlak(int angka) {
-    if (angka < 0) {
-        return -angka;
+int absolute(int number) {
+    if (number < 0) {
+        return -number;
     }
-    return angka;
+    return number;
 }
 
-int hitung(int nilai1, int nilai2) {
-    return mutlak(nilai1 - nilai2);
+int count(int value1, int value2) {
+    return absolute(value1 - value2);
 }
 
 int main()
 {
     int a, b, c, d;
-    int Hasil;
+    int Result;
 
     scanf("%d", &a);
     scanf("%d", &c);
     scanf("%d", &b);
     scanf("%d", &d);
 
-    Hasil = hitung(a, b) + hitung(c, d);
-    printf("%d", mutlak(Hasil));
+    Result = count(a, b) + count(c, d);
+    printf("%d", absolute(Result));
 
     return 0;
 }

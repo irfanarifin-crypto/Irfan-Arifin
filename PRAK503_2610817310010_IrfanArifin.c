@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-int maksimal(int a, int b) {
+int maximum(int a, int b) {
     if (a > b) {
         return a;
     }
     return b;
 }
 
-int minimal(int a, int b) {
+int minimum(int a, int b) {
     if (a < b) {
         return a;
     }
@@ -15,17 +15,17 @@ int minimal(int a, int b) {
 }
 
 int main() {
-    int batas = 0;
-    int maks = -100000;
+    int limit = 0;
+    int max = -100000;
     int minim = 100000;
-    int bilangan;
-    scanf("%d", &bilangan);
-    while (batas < bilangan) {
-        int nilai;
-        scanf("%d", &nilai);
-        maks = maksimal(maks, nilai);
-        minim = minimal(minim, nilai);
-        batas++;
+    int number;
+    scanf("%d", &number);
+    while (limit < number) {
+        int value;
+        scanf("%d", &value);
+        max = maximum(max, value);
+        minim = minimum(minim, value);
+        limit++;
     }
-    printf("%d %d", maks, minim);
+    printf("%d %d", max, minim);
 }

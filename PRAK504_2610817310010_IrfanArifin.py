@@ -1,9 +1,9 @@
 def reverse(n):
-    hasil = 0
+    result = 0
     while n > 0:
-        hasil = hasil * 10 + (n % 10)
+        result = result * 10 + (n % 10)
         n = n // 10
-    return hasil
+    return result
 
 A, B = map(int, input().split())
 A = reverse(A)

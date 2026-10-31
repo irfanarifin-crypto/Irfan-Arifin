@@ -1,13 +1,13 @@
-def MaxBilangan(a, b, c, d):
-    maks = a
-    if b > maks:
-        maks = b
-    if c > maks:
-        maks = c
-    if d > maks:
-        maks = d
-    return maks
+def MaxNumber(a, b, c, d):
+    max = a
+    if b > max:
+        max = b
+    if c > max:
+        max = c
+    if d > max:
+        max = d
+    return max
 
 a, b, c, d = map(int, input().split())
-hasil = MaxBilangan(a, b, c, d)
-print(hasil)
+result = MaxNumber(a, b, c, d)
+print(result)

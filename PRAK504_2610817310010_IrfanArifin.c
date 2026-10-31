@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 int reverse(int n) {
-    int hasil = 0;
+    int result = 0;
     while (n > 0) {
-        hasil = hasil * 10 + (n % 10);
+        result = result * 10 + (n % 10);
         n = n / 10;
     }
-    return hasil;
+    return result;
 }
 
 int main() {

@@ -1,12 +1,12 @@
-def mutlak(angka):
-    if angka < 0:
-        return -angka
-    return angka
+def absolute(number):
+    if number < 0:
+        return -number
+    return number
 
-def hitung(nilai1, nilai2):
-    return mutlak(nilai1 - nilai2)
+def count(value1, value2):
+    return absolute(value1 - value2)
 
 a, c, b, d = map(int, input().split())
 
-Hasil = hitung(a, b) + hitung(c, d)
-print(mutlak(Hasil))
+Result = count(a, b) + count(c, d)
+print(absolute(Result))
