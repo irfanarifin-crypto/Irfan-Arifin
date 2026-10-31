@@ -1,18 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    int n, genap;
+    int n, even;
     scanf("%d", &n);
     for (int i = 1; i <= n; i += 2) {
         printf("%d ", i);
     }
     printf("\n");
     if (n % 2 == 0) {
-        genap = n;
+        even = n;
     } else {
-        genap = n - 1;
+        even = n - 1;
     }
-    for (int i = genap; i > 1; i -= 2) {
+    for (int i = even; i > 1; i -= 2) {
         printf("%d ", i);
     }
     printf("\n");

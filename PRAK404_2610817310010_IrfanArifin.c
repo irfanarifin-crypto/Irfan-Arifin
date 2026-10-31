@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int pilihan;
+    int choice;
     float a, b;
 
     while (1) {
@@ -12,22 +12,22 @@ int main() {
         printf("4. Pembagian\n");
         printf("5. Exit\n");
         printf("Masukkan Pilihan : ");
-        scanf("%d", &pilihan);
+        scanf("%d", &choice);
 
-        if (pilihan == 5) {
+        if (choice == 5) {
             printf("Terimakasih, telah menggunakan kalkulator Irfan Arifin\n");
             break;
-        } else if (pilihan >= 1 && pilihan <= 4) {
+        } else if (choice >= 1 && choice <= 4) {
             printf("Masukkan nilai pertama : ");
             scanf("%f", &a);
             printf("Masukkan nilai kedua : ");
             scanf("%f", &b);
 
-            if (pilihan == 1)
+            if (choice == 1)
                 printf("Hasil penjumlahan antara %.2f dengan %.2f adalah %.2f\n", a, b, a + b);
-            else if (pilihan == 2)
+            else if (choice == 2)
                 printf("Hasil pengurangan antara %.2f dengan %.2f adalah %.2f\n", a, b, a - b);
-            else if (pilihan == 3)
+            else if (choice == 3)
                 printf("Hasil perkalian antara %.2f dengan %.2f adalah %.2f\n", a, b, a * b);
             else
                 printf("Hasil pembagian antara %.2f dengan %.2f adalah %.2f\n", a, b, a / b);
