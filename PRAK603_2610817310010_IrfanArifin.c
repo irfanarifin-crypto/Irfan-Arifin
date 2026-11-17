@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int n1, n2;
+    scanf("%d %d", &n1, &n2);
+
+    if (n1 != n2) {
+        printf("Jumlah tidak sama\n");
+        return 0;
+    }
+
+    int a[n1], b[n1];
+    for (int i = 0; i < n1; i++) scanf("%d", &a[i]);
+    for (int i = 0; i < n1; i++) scanf("%d", &b[i]);
+
+    for (int i = 0; i < n1; i++) {
+        if (i > 0) printf(" ");
+        printf("%d", a[i] * b[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
