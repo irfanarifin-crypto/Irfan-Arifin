@@ -9,7 +9,7 @@ int main() {
         return 0;
     }
 
-    int a[n1], b[n1];
+    int a[100], b[100];
     for (int i = 0; i < n1; i++) scanf("%d", &a[i]);
     for (int i = 0; i < n1; i++) scanf("%d", &b[i]);
 

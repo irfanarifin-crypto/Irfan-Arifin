@@ -2,17 +2,17 @@
 
 int main() {
     int n;
-    char text[50];
+    char text[100];
     scanf("%d", &n);
 
-    int a[n][n], b[n][n];
+    int a[100][100], b[100][100];
 
-    scanf(" %[^\n]", text);   // reads "Matriks A"
+    scanf(" %[^\n]", text); 
     for (int i = 0; i < n; i++)
         for (int j = 0; j < n; j++)
             scanf("%d", &a[i][j]);
 
-    scanf(" %[^\n]", text);   // reads "Matriks B"
+    scanf(" %[^\n]", text);
     for (int i = 0; i < n; i++)
         for (int j = 0; j < n; j++)
             scanf("%d", &b[i][j]);

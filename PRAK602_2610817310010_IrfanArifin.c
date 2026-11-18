@@ -9,7 +9,7 @@ int main () {
         scanf("%d", &room[i]);
     }
     for (int i = 0; i < n ; i++) {
-        printf("%d ", room[i] * (i + 1));
+        printf("%d", room[i] * (i + 1));
     }
     return 0;
 }
