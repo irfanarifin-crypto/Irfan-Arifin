@@ -16,14 +16,14 @@ int main(void) {
         scanf("%49s %d %d", p[i].name, &p[i].age, &p[i].skor);
     }
 
-    int tertinggi = 0;
+    int highest = 0;
     for (int i = 1; i < n; i++) {
-        if (p[i].skor > p[tertinggi].skor) {
-            tertinggi = i;
+        if (p[i].skor > p[highest].skor) {
+            highest = i;
         }
     }
 
     printf("Peserta dengan skor tertinggi adalah %s dengan skor %d\n",
-           p[tertinggi].name, p[tertinggi].skor);
+           p[highest].name, p[highest].skor);
     return 0;
 }

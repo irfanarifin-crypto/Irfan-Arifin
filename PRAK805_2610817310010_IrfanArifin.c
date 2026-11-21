@@ -1,18 +1,18 @@
 #include <stdio.h>
 
 struct Dompet {
-    char nama[50];
-    int saldo;
+    char name[50];
+    int balance;
 };
 
 int topUp(struct Dompet *d, int nominal) {
-    d->saldo += nominal;
+    d->balance += nominal;
     return 1;
 }
 
 int bayar(struct Dompet *d, int nominal) {
-    if (d->saldo >= nominal) {
-        d->saldo -= nominal;
+    if (d->balance >= nominal) {
+        d->balance -= nominal;
         return 1;
     }
     return 0;
@@ -22,13 +22,13 @@ int main(void) {
     struct Dompet d;
     int n;
 
-    scanf("%49s %d", d.nama, &d.saldo);
+    scanf("%49s %d", d.name, &d.balance);
     scanf("%d", &n);
 
-    char jenis[n];
+    char type[n];
     int nominal[n];
-    int berhasil[n];
-    int saldoSetelah[n];
+    int succeed[n];
+    int balanceAfter[n];
 
     for (int i = 0; i < n; i++) {
         scanf(" %c %d", &jenis[i], &nominal[i]);
@@ -38,7 +38,7 @@ int main(void) {
         } else {
             berhasil[i] = bayar(&d, nominal[i]);
         }
-        saldoSetelah[i] = d.saldo;
+        saldoSetelah[i] = d.balance;
     }
 
     for (int i = 0; i < n; i++) {
