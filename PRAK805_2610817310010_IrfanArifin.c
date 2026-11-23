@@ -1,16 +1,15 @@
 #include <stdio.h>
 
-struct Dompet {
+struct Wallet {
     char name[50];
     int balance;
 };
 
-int topUp(struct Dompet *d, int nominal) {
+void topUp(struct Wallet *d, int nominal) {
     d->balance += nominal;
-    return 1;
 }
 
-int bayar(struct Dompet *d, int nominal) {
+int bayar(struct Wallet *d, int nominal) {
     if (d->balance >= nominal) {
         d->balance -= nominal;
         return 1;
@@ -19,7 +18,7 @@ int bayar(struct Dompet *d, int nominal) {
 }
 
 int main(void) {
-    struct Dompet d;
+    struct Wallet d;
     int n;
 
     scanf("%49s %d", d.name, &d.balance);
@@ -31,26 +30,27 @@ int main(void) {
     int balanceAfter[n];
 
     for (int i = 0; i < n; i++) {
-        scanf(" %c %d", &jenis[i], &nominal[i]);
+        scanf(" %c %d", &type[i], &nominal[i]);
 
-        if (jenis[i] == 'T') {
-            berhasil[i] = topUp(&d, nominal[i]);
-        } else {
-            berhasil[i] = bayar(&d, nominal[i]);
+        if (type[i] == 'T') {
+            topUp(&d, nominal[i]);
+            succeed[i] = 1;
+        } else if (type[i] == 'B') {
+            succeed[i] = bayar(&d, nominal[i]);
         }
-        saldoSetelah[i] = d.balance;
+        balanceAfter[i] = d.balance;
     }
 
     for (int i = 0; i < n; i++) {
-        if (jenis[i] == 'T') {
-            printf("Top up %d berhasil, saldo = %d\n", nominal[i], saldoSetelah[i]);
-        } else if (berhasil[i]) {
-            printf("Bayar %d berhasil, saldo = %d\n", nominal[i], saldoSetelah[i]);
+        if (type[i] == 'T') {
+            printf("Top up %d berhasil, saldo = %d\n", nominal[i], balanceAfter[i]);
+        } else if (succeed[i]) {
+            printf("Bayar %d berhasil, saldo = %d\n", nominal[i], balanceAfter[i]);
         } else {
             printf("Bayar %d gagal, saldo tidak cukup\n", nominal[i]);
         }
     }
-    printf("Saldo akhir %s = %d\n", d.nama, d.saldo);
+    printf("Saldo akhir %s = %d\n", d.name, d.balance);
 
     return 0;
 }
