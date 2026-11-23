@@ -23,7 +23,6 @@ int main(void) {
         }
     }
 
-    printf("Peserta dengan skor tertinggi adalah %s dengan skor %d\n",
-           p[highest].name, p[highest].skor);
+    printf("Peserta dengan skor tertinggi adalah %s dengan skor %d\n",p[highest].name, p[highest].skor);
     return 0;
 }
